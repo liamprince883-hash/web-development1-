@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <style>
+        /*Reset*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            display: flex ;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+        }
+        /*Sidebar*/
+        .sidebar{
+            position: fixed;
+            top: 0;
+            left: o;
+            width: 250px;
+            height: 100%;
+            background-color: #000;
+            padding: 20px;
+        }
+        .sidebar h2 { 
+            color: green;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li:hover {
+            margin: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .sidebar ul li:hover {
+            color: black;
+        }
+        /*Main Section*/
+        .main-content{
+            margin-left: 220px;
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+        .main-content h1 {
+            margin-bottom: 20px;
+        }
+        .playlist{
+            
+            grid-template-columns: repeat(auto-fill);
+        }
+        .card{
+            background-color: #181818;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover {
+            background-color: #282828;
+        }
+        .card img {
+            width: 250px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        /* Music Player */
+        .player{
+            position: fixed;
+            bottom:o;
+            left: o;
+            width: 250px;
+            height: 80px;
+            background-color: #181818;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: o 20px;
+        }
+        .player .song-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .player img {
+            width: 250px;
+            border-radius: 5px;
+        }
+        .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .controls button:hover {
+            color: black;
+        }
+        .progress-bar {
+            flex: 1;
+            margin: 250px;
+            height: 5px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress {
+            width: 250px;
+            height: 100%;
+            background-color:   #1db954;
+        }
+    </style>
+</head>
+<body>
+    <!--sidebar-->
+    <div class="sidebar">
+        <h2>Spotify</h2>
+        <ol>
+            <li>Home</li>
+            <li>Search
+            <a href="https://youtu.be/k5HwLyuAnpA?si=npS0PGhlJpKq2vPO" target="_blank">Nuresry Rhymes,</a>
+            <a href="https://youtu.be/xEHZR1wm6_c?si=OTECfVyipwf8NziR" target="_blank">23,</a>
+            <a href="https://youtu.be/iWOzVBjmAQc?si=kJj-uAH4FKJo2xxz" target="_blank">Papi Chulo</a>
+            </li>
+            <li>Your Library
+                <a href="https://youtu.be/kNwpbsFdU3Q?si=cuof38QaJ70cgND9" target="_blank">Thugnificent,</a>
+                <a href="https://youtu.be/UsxA0-OCzoQ?si=j8v8a6dWX8Nv95Uk" target="_blank">Shalalala,</a>
+                <a href="https://youtu.be/B9synWjqBn8?si=KMowkLkTjisTSAjv" target="_blank">Fe!n</a>
+            </li>
+            <li>Create playlist</li>
+            <li>Liked Songs
+                <a href="https://youtu.be/P-t_qXV8r5g?si=37f9pM8T7ObaRnuf" target="_blank">In Dar Bar,</a>
+                <a href="https://youtu.be/EZkNUmVXg6U?si=7uAX5nLjb5mQfS2N" target="_blank">ELEMENT,</a>
+                <a href="https://youtu.be/CmG1drZ5W2w?si=77x69SXJlbAIcVLQ" target="_blank">Genes1s,</a>
+                <a href="https://youtu.be/V_jHc_n0p9c?si=nxXE3RBOnz3kIZIA" target="_blank">Blueberry Faygo,</a>
+                <a href="https://youtu.be/hzt31eJTGxo?si=TICEB3p_7S7NfW9Y" target="_blank"> Took Her To The O,</a>
+            </li>
+        </ol>
+    </div>  
+
+    <!--Main content-->
+    <div class="main-content;" ></div>
+    <h1>Good Evening</h1>
+    <div class="playlist">
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.DwPFqs2qzY21ftAGPgJ27wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+            <p>Latest trending</p>
+            <a href="https://youtu.be/RPIykhz53-E?si=3k6sc6hOPSBlpxvP" target="_blank">Listen to the song</a>
+            <a href="https://youtu.be/VcRc2DHHhoM?si=gtMv55NSUsl5Nrwi" target="_blank">Listen to the song</a>
+            <a href="https://youtu.be/-z6tnA8DfG8?si=1Xs4DS0LNHZPqwaP" target="_blank">Listen to the song</a>
+    </div>
+    <div class="card">
+        <img src="https://wallpapercave.com/wp/wp3184780.jpg" alt="">
+        <p>Type Shi</p>
+        <a href="https://youtu.be/I0fgkcTbBoI?si=H-tJIxGDu925ajNZ" target="_blank">Listen to the song</a>
+        <p>Gatti</p> 
+        <a href="https://youtu.be/kx7P_ENnDPE?si=lSx7lEUUu2jR48zt" target="_blank">Listen to the song</a>
+        <p>Sprinter</p>
+        <a href="https://youtu.be/pSY3i5XHHXo?si=RgidKjsiMK9JYP4S" target="_blank">Watch the song</a>
+    </div>
+
+    <div class="card">
+        <img src="https://cdn.wallpapersafari.com/96/73/7sMQmS.jpg" alt="">
+        <a href="https://youtu.be/oorVWW9ywG0?si=sBw3npGVBBAUw2QO" target="_blank">Pop Smoke</a>
+          <img src="https://images.genius.com/734ae36286fea1d1e1154d131d86ac41.1000x1000x1.png" alt="">
+          <a href="https://youtu.be/pDddlvCfTiw?si=6KXtUMkuO4eUbCxN" target="_blank">Central Cee</a>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.wTB_OVz8Q4K79zSJOHSGhQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+        <a href="https://youtu.be/hzt31eJTGxo?si=BNMi-5tK_QevCoAw" target="_blank">King Von</a>
+        
+        <p>Artists you like</p>
+    </div>
+
+    <!--Music Player-->
+    <div class="player">
+        <div class="song-info">
+            <img src="https://via.placeholder . com/150" alt="Now Playing">
+            <div>
+                <p>Song Title</p>
+                <small>Artist Name</small>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+            </div>
+        </div>
+</body>
+</html>
